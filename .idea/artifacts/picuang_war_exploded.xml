@@ -6,7 +6,6 @@
         <exploded>true</exploded>
         <module>picuang</module>
         <packaging>war</packaging>
-        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
     <root id="root">
@@ -55,8 +54,13 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-expression:5.1.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-core:5.1.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-jcl:5.1.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-websocket:2.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-messaging:5.1.8.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework:spring-websocket:5.1.8.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot:2.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-autoconfigure:2.1.6.RELEASE" />
+          <element id="library" level="project" name="Maven: com.alibaba:fastjson:1.2.70" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.8" />
         </element>
       </element>
       <element id="directory" name="META-INF">

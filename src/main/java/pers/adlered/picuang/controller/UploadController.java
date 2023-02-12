@@ -10,6 +10,7 @@ import pers.adlered.picuang.log.Logger;
 import pers.adlered.picuang.prop.Prop;
 import pers.adlered.picuang.result.Result;
 import pers.adlered.picuang.tool.IPUtil;
+import pers.adlered.picuang.tool.PictureNameList;
 import pers.adlered.picuang.tool.ToolBox;
 import pers.adlered.simplecurrentlimiter.main.SimpleCurrentLimiter;
 
@@ -19,6 +20,8 @@ import java.io.BufferedInputStream;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -27,8 +30,24 @@ public class UploadController {
     public static SimpleCurrentLimiter uploadLimiter = new SimpleCurrentLimiter(1, 1);
     public static SimpleCurrentLimiter cloneLimiter = new SimpleCurrentLimiter(3, 1);
 
+    @RequestMapping("/deleteUploadImages")
+    @ResponseBody
+    public Result deleteUploadImages() {
+        Result result = new Result();
+        if (ToolBox.deleteUploadImages()) {
+            result.setCode(200);
+            result.setMsg("ok.");
+            return result;
+        } else {
+            result.setCode(500);
+            result.setMsg("no need to delete.");
+            return result;
+        }
+    }
+
     /**
      * 携带管理员密码进行图片上传
+     *
      * @param file
      * @param request
      * @param password
@@ -40,10 +59,10 @@ public class UploadController {
         String truePassword = Prop.get("password");
         Result result = new Result();
         if (!adminOnly(session, result)) {
-            return upload(file, request);
+            return upload(file, request, "");
         } else {
             if (truePassword.equals(password)) {
-                return upload(file, request);
+                return upload(file, request, "");
             }
         }
         result.setCode(500);
@@ -53,69 +72,83 @@ public class UploadController {
 
     @RequestMapping("/upload")
     @ResponseBody
-    public Result upload(@PathVariable MultipartFile file, HttpServletRequest request, HttpSession session) {
+    public Result upload(@PathVariable MultipartFile file, String type, HttpServletRequest request, HttpSession session) {
         Result result = new Result();
+        Logger.log("type: " + type);
         if (adminOnly(session, result)) {
             result.setCode(500);
             result.setMsg("Admin only upload.");
             return result;
         }
-        return upload(file, request);
+
+        return upload(file, request, type);
     }
 
-    public Result upload(@PathVariable MultipartFile file, HttpServletRequest request) {
-        synchronized (this) {
-            uploadLimiter.setExpireTimeMilli(500);
-            String addr = IPUtil.getIpAddr(request).replaceAll("\\.", "/").replaceAll(":", "/");
-            boolean allowed = uploadLimiter.access(addr);
-            try {
-                while (!allowed) {
-                    allowed = uploadLimiter.access(addr);
-                    System.out.print(".");
-                    Thread.sleep(100);
-                }
-            } catch (InterruptedException IE) {
+    public Result upload(@PathVariable MultipartFile file, HttpServletRequest request, String type) {
+
+        uploadLimiter.setExpireTimeMilli(500);
+        String addr = IPUtil.getIpAddr(request).replaceAll("\\.", "/").replaceAll(":", "/");
+        boolean allowed = uploadLimiter.access(addr);
+        try {
+            while (!allowed) {
+                allowed = uploadLimiter.access(addr);
+                System.out.print(".");
+                Thread.sleep(100);
             }
-            Result result = new Result();
-            //是否上传了文件
-            if (file.isEmpty()) {
-                result.setCode(406);
-                return result;
-            }
-            //是否是图片格式
-            String filename = file.getOriginalFilename();
-            String suffixName = ToolBox.getSuffixName(filename);
-            Logger.log("SuffixName: " + suffixName);
-            if (ToolBox.isPic(suffixName)) {
-                String time = ToolBox.getDirByTime();
-                File dest = ToolBox.generatePicFile(suffixName, time, addr);
-                result.setData(filename);
-                filename = dest.getName();
-                Logger.log("Saving into " + dest.getAbsolutePath());
-                if (!dest.getParentFile().exists()) {
-                    dest.getParentFile().mkdirs();
-                }
-                try {
-                    file.transferTo(dest);
-                    String url = "/uploadImages/" + addr + "/" + time + filename;
-                    result.setCode(200);
-                    result.setMsg(url);
-                    int count = Integer.parseInt(Prop.get("imageUploadedCount"));
-                    ++count;
-                    Prop.set("imageUploadedCount", String.valueOf(count));
-                    return result;
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            } else {
-                result.setCode(500);
-                result.setMsg("不是jpg/jpeg/png/svg/gif图片！");
-                return result;
-            }
-            result.setCode(500);
-            result.setMsg("未知错误。");
+        } catch (InterruptedException IE) {
+        }
+        Result result = new Result();
+        //是否上传了文件
+        if (file.isEmpty()) {
+            result.setCode(406);
             return result;
         }
+        //是否是图片格式
+        String filename = file.getOriginalFilename();
+        String suffixName = ToolBox.getSuffixName(filename);
+        Logger.log("SuffixName: " + suffixName);
+        if (ToolBox.isPic(suffixName)) {
+            String[] time = ToolBox.getDirByTime();
+            File dest = ToolBox.generatePicFile(suffixName, time[1], time[2], type);
+            result.setData(filename);
+            filename = dest.getName();
+            Logger.log("Saving into " + dest.getAbsolutePath());
+            if (!dest.getParentFile().exists()) {
+                dest.getParentFile().mkdirs();
+            }
+            try {
+                file.transferTo(dest);
+                String url = "/uploadImages/" + time[1] + type + "/" + filename;
+                String archive_url = ToolBox.getPicStoreDir() + "/" + time[1] + type + "/" + filename;
+                switch (type) {
+                    case "front":
+                        PictureNameList.getFront().add(archive_url);
+                        break;
+                    case "belowRGB":
+                        PictureNameList.getBelowRGB().add(archive_url);
+                        break;
+                    case "belowBinary":
+                        PictureNameList.getBelowBinary().add(archive_url);
+                        break;
+                }
+                result.setCode(200);
+                result.setMsg(url);
+                int count = Integer.parseInt(Prop.get("imageUploadedCount"));
+                ++count;
+                Prop.set("imageUploadedCount", String.valueOf(count));
+                return result;
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            result.setCode(500);
+            result.setMsg("不是jpg/jpeg/png/svg/gif图片！");
+            return result;
+        }
+        result.setCode(500);
+        result.setMsg("未知错误。");
+        return result;
+
     }
 
     @RequestMapping("/clone")
@@ -139,12 +172,14 @@ public class UploadController {
             try {
                 String suffixName = ToolBox.getSuffixName(url);
                 Logger.log("SuffixName: " + suffixName);
-                String time = ToolBox.getDirByTime();
+                String time = ToolBox.getDirByTime()[0];
                 File dest;
+                String type = "";
+                dest = null;
                 if (ToolBox.isPic(suffixName)) {
-                    dest = ToolBox.generatePicFile(suffixName, time, addr);
+//                    dest = ToolBox.generatePicFile(suffixName, time, type);
                 } else {
-                    dest = ToolBox.generatePicFile(".png", time, addr);
+//                    dest = ToolBox.generatePicFile(".png", time, type);
                 }
                 Logger.log("Saving into " + dest.getAbsolutePath());
                 if (!dest.getParentFile().exists()) {

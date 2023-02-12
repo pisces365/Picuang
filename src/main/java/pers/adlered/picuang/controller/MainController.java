@@ -39,4 +39,12 @@ public class MainController {
         modelAndView.addObject("version", Prop.getVersion());
         return modelAndView;
     }
+
+    @RequestMapping("/last")
+    @ResponseBody
+    public ModelAndView last() {
+        ModelAndView modelAndView = new ModelAndView("last");
+        modelAndView.addObject("version", Prop.getVersion());
+        return modelAndView;
+    }
 }

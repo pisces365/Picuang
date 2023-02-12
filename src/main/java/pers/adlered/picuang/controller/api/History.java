@@ -1,11 +1,13 @@
 package pers.adlered.picuang.controller.api;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pers.adlered.picuang.controller.api.bean.PicProp;
 import pers.adlered.picuang.log.Logger;
 import pers.adlered.picuang.tool.IPUtil;
+import pers.adlered.picuang.tool.PictureNameList;
 import pers.adlered.picuang.tool.ToolBox;
 
 import javax.servlet.http.HttpServletRequest;
@@ -13,6 +15,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.Queue;
 
 /**
  * <h3>picuang</h3>
@@ -25,38 +28,77 @@ import java.util.List;
 public class History {
     @RequestMapping("/api/list")
     @ResponseBody
-    public List<PicProp> list(HttpServletRequest request, String year, String month, String day) {
+    public List<PicProp> list(HttpServletRequest request, String year, String month, String day, String type) {
         List<PicProp> list = new ArrayList<>();
-        File file = new File(getHome(request) + year + "/" + month + "/" + day + "/");
-        File[] hour = listFiles(file);
-        for (File i : hour) {
-            if (i.isDirectory()) {
-                String dir = getHome(request) + year + "/" + month + "/" + day + "/" + i.getName() + "/";
-                File[] minute = listFiles(new File(dir));
-                for (File j : minute) {
-                    String filesDir = dir + j.getName() + "/";
-                    File[] files = listFiles(new File(filesDir));
-                    try {
-                        for (File k : files) {
-                            if (k.isFile()) {
-                                PicProp picProp = new PicProp();
-                                picProp.setTime(i.getName() + ":" + j.getName());
-                                picProp.setFilename(k.getName());
-                                picProp.setPath("/uploadImages/" + IPUtil.getIpAddr(request).replaceAll("\\.", "/").replaceAll(":", "/") + "/" + year + "/" + month + "/" + day + "/" + i.getName() + "/" + j.getName() + "/" + k.getName());
-                                picProp.setIp(IPUtil.getIpAddr(request));
-                                list.add(picProp);
-                            }
-                        }
-                    } catch (NullPointerException NPE) {
-                        logNpe();
-                        continue;
-                    }
+        File file = new File(getHome(request) + year + "/" + month + "/" + day + "/" + type + "/");
+        File[] files = listFiles(file);
+
+        try {
+            for (File k : files) {
+                if (k.isFile()) {
+                    String[] splitName = k.getName().split("-");
+                    PicProp picProp = new PicProp();
+                    picProp.setTime(splitName[0] + ":" + splitName[1]);
+                    picProp.setFilename(k.getName());
+                    picProp.setPath("/uploadImages/" + year + "/" + month + "/" + day + "/" + type + "/" + k.getName());
+                    picProp.setIp(IPUtil.getIpAddr(request));
+                    list.add(picProp);
                 }
             }
+        } catch (NullPointerException NPE) {
+            logNpe();
+
         }
         Collections.reverse(list);
         return list;
     }
+
+    @RequestMapping("/api/getLastPic")
+    @ResponseBody
+    @CrossOrigin
+    public PicProp getLastPic(HttpServletRequest request, String year, String month, String day, String type) {
+        String address = "";
+        switch (type) {
+            case "front":
+                address = PictureNameList.getFront().peek();
+                if (address != null)
+                    PictureNameList.getFront().removeFirst();
+                break;
+            case "belowRGB":
+                address = PictureNameList.getBelowRGB().peek();
+                if (address != null)
+                    PictureNameList.getBelowRGB().removeFirst();
+                break;
+            case "belowBinary":
+                address = PictureNameList.getBelowBinary().peek();
+                if (address != null)
+                    PictureNameList.getBelowBinary().removeFirst();
+                break;
+        }
+        if (address == null) {
+            return null;
+        }
+        File file = new File(address);
+        System.out.println(address);
+
+        PicProp picProp = new PicProp();
+        try {
+            if (file.isFile()) {
+                String[] splitName = file.getName().split("-");
+                picProp.setTime(splitName[0] + ":" + splitName[1]);
+                picProp.setFilename(file.getName());
+                picProp.setPath("/uploadImages/" + year + "/" + month + "/" + day + "/" + type + "/" + file.getName());
+                picProp.setIp(IPUtil.getIpAddr(request));
+            }
+
+        } catch (NullPointerException NPE) {
+            logNpe();
+
+        }
+        return picProp;
+
+    }
+
 
     @RequestMapping("/api/day")
     @ResponseBody
@@ -115,8 +157,8 @@ public class History {
     }
 
     private String getHome(HttpServletRequest request) {
-        String addr = IPUtil.getIpAddr(request).replaceAll("\\.", "/").replaceAll(":", "/");
-        return ToolBox.getPicStoreDir() + addr + "/";
+//        String addr = IPUtil.getIpAddr(request).replaceAll("\\.", "/").replaceAll(":", "/");
+        return ToolBox.getPicStoreDir() + "/";
     }
 
     private File[] listFiles(File file) {

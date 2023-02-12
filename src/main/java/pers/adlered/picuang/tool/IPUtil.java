@@ -27,6 +27,7 @@ public class IPUtil {
                 if (ipAddress.equals("127.0.0.1")) {
                     InetAddress inet = null;
                     try {
+//                        System.out.println("---system is in 127.0.0.1");
                         inet = InetAddress.getLocalHost();
                     } catch (UnknownHostException e) {
                         e.printStackTrace();
@@ -39,6 +40,10 @@ public class IPUtil {
                     ipAddress = ipAddress.substring(0, ipAddress.indexOf(","));
                 }
             }
+            InetAddress inet = InetAddress.getLocalHost();
+            ipAddress = inet.getHostAddress() + ":" +request.getServerPort();
+
+//            System.out.println("---get local host:" + ipAddress);
         } catch (Exception e) {
             ipAddress = "";
         }
