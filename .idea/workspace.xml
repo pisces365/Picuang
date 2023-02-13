@@ -5,42 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b87d8c55-1834-406c-9684-18f017a5d2d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_70.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_8.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_2_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_5_1_8_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/config/ImageDeleteSchedule.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/config/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/Upload2Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/Upload3Controller.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/SocketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer3.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/tool/PictureNameList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/last/last.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/last.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/picuang_war.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/picuang_war.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/picuang_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/picuang_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_javax_activation_api_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_3_1.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/picuang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/picuang.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/PicuangApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/PicuangApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/UploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/UploadController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/api/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/api/History.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/tool/IPUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/tool/IPUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/tool/ToolBox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/tool/ToolBox.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/history/histories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/history/histories.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/user/common-queue.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/user/common-queue.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/history.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/history.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/SocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/SocketController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/SocketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/SocketController.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -182,7 +151,7 @@
     "RequestMappingsPanelWidth1": "75",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/pisces/Gitware/smart-screen-for-uav",
+    "last_opened_file_path": "/home/pisces/Gitware/Picuang",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -480,6 +449,9 @@
       <workItem from="1675996486268" duration="3833000" />
       <workItem from="1676031753202" duration="6200000" />
       <workItem from="1676080583945" duration="44574000" />
+      <workItem from="1676294731452" duration="1439000" />
+      <workItem from="1676296375803" duration="36000" />
+      <workItem from="1676296658469" duration="45000" />
     </task>
     <task id="LOCAL-00027" summary="修改版本号">
       <created>1573104828370</created>

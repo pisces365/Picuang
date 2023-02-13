@@ -23,6 +23,10 @@ public class SocketController {
     private UAVHeightWebSocketServer uAVHeightWebSocketServer;
     @Autowired
     private UAVHeightWebSocketServer2 uAVHeightWebSocketServer2;
+    @Autowired
+    private WebSocketFireAreaImage webSocketFireAreaImage;
+    @Autowired
+    private WebSocketCalcResult webSocketCalcResult;
     @RequestMapping("/index")
     public String index() {
         return "index";
@@ -53,6 +57,19 @@ public class SocketController {
     @RequestMapping("/UAVHeightWebSocket2")
     public ModelAndView socketUAVHeight2() {
         ModelAndView mav=new ModelAndView("/UAVHeightWebSocket2");
+        return mav;
+    }
+
+    @RequestMapping("/webSocketFireAreaImage")
+    public ModelAndView webSocketFireAreaImageFunc() {
+        ModelAndView mav=new ModelAndView("/webSocketFireAreaImage");
+        return mav;
+    }
+
+
+    @RequestMapping("/webSocketCalcResult")
+    public ModelAndView webSocketCalcResultFunc() {
+        ModelAndView mav=new ModelAndView("/webSocketCalcResult");
         return mav;
     }
 }
