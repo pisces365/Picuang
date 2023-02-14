@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b87d8c55-1834-406c-9684-18f017a5d2d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.attach_pid466627" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/uav_record.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/SocketController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/SocketController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/SocketController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/SocketController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketServer2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketServer2.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,23 +150,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/pisces/Gitware/Picuang",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "spring.configuration.checksum": "3dc011c4181fe3f2771f275841d5f5e9",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/fox/gitware/Picuang&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;3dc011c4181fe3f2771f275841d5f5e9&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket" />
@@ -336,7 +349,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.PicuangApplication">
+  <component name="RunManager" selected="Application.PicuangApplication">
     <configuration name="DoubleKeys" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="pers.adlered.picuang.tool.double_keys.main.DoubleKeys" />
       <module name="picuang" />
@@ -401,7 +414,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.rest-api_4#1" />
         <item itemvalue="Application.PicuangApplication" />
         <item itemvalue="Application.DoubleKeys" />
         <item itemvalue="Application.Test" />
@@ -872,5 +884,9 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

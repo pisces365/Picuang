@@ -1,11 +1,15 @@
 package pers.adlered.picuang.controller.websocket;
 
 import org.springframework.stereotype.Component;
+import org.springframework.util.ClassUtils;
 
 import javax.websocket.*;
 import javax.websocket.server.PathParam;
 import javax.websocket.server.ServerEndpoint;
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -19,6 +23,34 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Component
 
 public class UAVHeightWebSocketServer2 {
+
+    private static HashMap<String, String> map = new HashMap<>();
+    static { //读入无人机高度与像素转换文件
+        BufferedReader br = null;
+        try {
+            br = new BufferedReader(new FileReader(ClassUtils.getDefaultClassLoader().getResource("").getPath() + "static/uav_record.txt"));
+            String line = null;
+            while((line = br.readLine()) != null) {
+                String[] kv = line.split(" ");
+                String key = kv[0];
+                String value = kv[1];
+                map.put(key, value);
+            }
+        } catch(Exception e) {
+            System.out.println("uav_record read exception:" + e);
+        } finally {
+            if(br != null) {
+                try {
+                    br.close();
+                } catch (Exception e) {
+                    System.out.println("uav_record close exception:" + e);
+                }
+            }
+        }
+
+//        System.out.println(map);
+    }
+
     /**
      * 静态变量，用来记录当前在线连接数,线程安全
      */
@@ -97,9 +129,10 @@ public class UAVHeightWebSocketServer2 {
     //收到客户端信息
     @OnMessage
     public void onMessage(String data, Session session, @PathParam(value = "sid") String userName, @PathParam(value = "type") String type) throws IOException{
+        String height_value = map.get(data);
         try {
             for(ConcurrentHashMap.Entry<String, Session> ce: SessionPools.entrySet()) {
-                ce.getValue().getBasicRemote().sendText(data);
+                ce.getValue().getBasicRemote().sendText(data + "-" + height_value);
             }
 
         } catch (Exception e) {

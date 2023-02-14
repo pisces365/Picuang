@@ -23,7 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
  * @DateTime: 2022/5/7 14:10
  * @Description: 该类用于 提供websocket服务
  */
-@ServerEndpoint(value="/webSocket2/{sid}/{type}")
+@ServerEndpoint(value = "/webSocket2/{sid}/{type}")
 @Component
 
 public class WebSocketServer2 {
@@ -40,13 +40,14 @@ public class WebSocketServer2 {
 
     /**
      * 向对应客户端发送信息
+     *
+     * @param session
+     * @param message
      * @author 杨捷宁
      * @date 2022/5/7 19:29
- 	 * @param session
- 	 * @param message
      */
     public static void sendMessage(Session session, String message) throws IOException {
-        if(session != null){
+        if (session != null) {
             synchronized (session) {
                 session.getBasicRemote().sendText(message);
             }
@@ -54,29 +55,31 @@ public class WebSocketServer2 {
     }
 
     public static void tryToSend(double totalPrice) {
-        if(SessionPools.size()==0){
+        if (SessionPools.size() == 0) {
             return;
         }
 
-        for (Session session: SessionPools.values()) {
+        for (Session session : SessionPools.values()) {
             try {
                 sendMessage(session, "");
-            } catch(Exception e){
+            } catch (Exception e) {
                 e.printStackTrace();
                 continue;
             }
         }
     }
+
     /**
      * 建立连接成功调用
+     *
+     * @param session
+     * @param userName 用户名称,用于记录和删除session
+     * @param type     需求类型
      * @author 杨捷宁
      * @date 2022/5/7 19:30
- 	 * @param session
- 	 * @param userName 用户名称,用于记录和删除session
- 	 * @param type 需求类型
      */
     @OnOpen
-    public void onOpen(Session session, @PathParam(value = "sid") String userName, @PathParam(value = "type") String type){
+    public void onOpen(Session session, @PathParam(value = "sid") String userName, @PathParam(value = "type") String type) {
 
         SessionPools.put(userName, session);
 
@@ -91,32 +94,33 @@ public class WebSocketServer2 {
 
     /**
      * 关闭连接时调用
+     *
      * @author 杨捷宁
      * @date 2022/5/7 9:45
      */
     @OnClose
-    public void onClose(){
+    public void onClose(@PathParam(value = "sid") String userName) {
 
-//        SessionPools.remove(userName);
+        SessionPools.remove(userName);
 
         subOnlineCount();
     }
 
     //收到客户端信息
     @OnMessage
-    public void onMessage(String data, Session session, @PathParam(value = "sid") String userName, @PathParam(value = "type") String type) throws IOException{
+    public void onMessage(String data, Session session, @PathParam(value = "sid") String userName, @PathParam(value = "type") String type) throws IOException {
 //        Logger.log("Received video data size:" + data);
         BASE64Decoder decoder = new BASE64Decoder();
         try {
             // Base64解码
-            byte[] bytes = decoder.decodeBuffer(data.substring(2,data.length()-1));
+            byte[] bytes = decoder.decodeBuffer(data.substring(2, data.length() - 1));
             for (int i = 0; i < bytes.length; ++i) {
                 if (bytes[i] < 0) {// 调整异常数据
                     bytes[i] += 256;
                 }
             }
             String[] time = ToolBox.getDirByTime();
-            String path = ToolBox.getPicStoreDir() + time[1] + type + "/" + time[2] ;
+            String path = ToolBox.getPicStoreDir() + time[1] + type + "/" + time[2];
             String suffixName = Integer.toString(new Random(1).nextInt(10));
             String fileName = UUID.randomUUID() + suffixName;
             // 生成jpeg图片
@@ -131,13 +135,13 @@ public class WebSocketServer2 {
             String filename = dest.getName();
             String archive_url = "uploadImages/" + time[1] + type + "/" + filename + ".jpg";
             PictureNameList.getBelowRGB().add(archive_url);
-            for(ConcurrentHashMap.Entry<String, Session> ce: SessionPools.entrySet()) {
+            for (ConcurrentHashMap.Entry<String, Session> ce : SessionPools.entrySet()) {
                 ce.getValue().getBasicRemote().sendText(archive_url);
             }
             //====
 
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println("server2" + e);
         }
 
 //        try {
@@ -149,12 +153,12 @@ public class WebSocketServer2 {
 
     //错误时调用
     @OnError
-    public void onError(Session session, Throwable throwable){
+    public void onError(Session session, Throwable throwable) {
         System.out.println("发生错误");
         throwable.printStackTrace();
     }
 
-    public static void addOnlineCount(){
+    public static void addOnlineCount() {
         onlineNum.incrementAndGet();
     }
 

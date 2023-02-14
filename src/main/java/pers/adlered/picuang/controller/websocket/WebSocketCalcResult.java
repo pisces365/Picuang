@@ -97,6 +97,7 @@ public class WebSocketCalcResult {
     //收到客户端信息
     @OnMessage
     public void onMessage(String data, Session session, @PathParam(value = "sid") String userName, @PathParam(value = "type") String type) throws IOException{
+        System.out.println(data);
         try {
             for(ConcurrentHashMap.Entry<String, Session> ce: SessionPools.entrySet()) {
                 ce.getValue().getBasicRemote().sendText(data);
