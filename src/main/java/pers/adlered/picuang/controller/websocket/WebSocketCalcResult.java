@@ -87,9 +87,9 @@ public class WebSocketCalcResult {
      * @date 2022/5/7 9:45
      */
     @OnClose
-    public void onClose(){
+    public void onClose(@PathParam(value = "sid") String userName){
 
-//        SessionPools.remove(userName);
+        SessionPools.remove(userName);
 
         subOnlineCount();
     }

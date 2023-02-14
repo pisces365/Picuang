@@ -5,18 +5,94 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b87d8c55-1834-406c-9684-18f017a5d2d4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.attach_pid466627" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/uav_record.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketServer2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketServer2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/PicuangApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/access/HttpOrHttpsAccess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/access/MyX509TrustManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/config/ImageDeleteSchedule.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/config/WebSocketConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/Upload2Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/Upload3Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/UploadController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/admin/Admin.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/admin/api/AdminAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/admin/api/ConfigAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/api/History.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/api/bean/PicProp.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/SocketController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketServer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketServer2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketServer3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/log/Logger.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/prop/Prop.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/result/Result.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/tool/FileUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/tool/IPUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/tool/PictureNameList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/tool/ToolBox.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/tool/double_keys/main/DoubleKeys.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/tool/double_keys/storage/DoubleKeysStorage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/simplecurrentlimiter/cache/MainCache.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/simplecurrentlimiter/cache/pair/CachePair.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/simplecurrentlimiter/control/MainControl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/simplecurrentlimiter/main/SimpleCurrentLimiter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/background/load.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-theme.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap-theme.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/bootstrap/js/npm.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/bootstrap/cover.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/admin/config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/admin/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/axios.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/clipboard.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/d-toast.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/fantastic-progress-bar-bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/history/histories.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/last/last.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/lazyload.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/transition.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/user/click-listen.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/user/clipboard-control.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/user/common-queue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/user/drag-and-drop.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/user/notify.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/user/on-paste.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/vue.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/uav_record.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/history.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/last.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pers/adlered/picuang/picuang/PicuangApplicationTests.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +236,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/fox/gitware/Picuang&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/pisces/Gitware/smart-screen-for-uav&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -464,6 +540,8 @@
       <workItem from="1676294731452" duration="1439000" />
       <workItem from="1676296375803" duration="36000" />
       <workItem from="1676296658469" duration="45000" />
+      <workItem from="1676363400268" duration="1292000" />
+      <workItem from="1676374920772" duration="1074000" />
     </task>
     <task id="LOCAL-00027" summary="修改版本号">
       <created>1573104828370</created>
