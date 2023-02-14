@@ -8,7 +8,9 @@ import org.springframework.web.socket.server.standard.SpringConfigurator;
 import pers.adlered.picuang.log.Logger;
 import pers.adlered.picuang.tool.PictureNameList;
 import pers.adlered.picuang.tool.ToolBox;
-import sun.misc.BASE64Decoder;
+
+import java.util.Base64;
+import java.util.Base64.Decoder;
 
 import javax.websocket.*;
 import javax.websocket.server.HandshakeRequest;
@@ -115,10 +117,10 @@ public class WebSocketServer {
     @OnMessage
     public void onMessage(String data, Session session, @PathParam(value = "sid") String userName, @PathParam(value = "type") String type) throws IOException{
 //        Logger.log("Received video data size:" + data);
-        BASE64Decoder decoder = new BASE64Decoder();
+        Decoder decoder = Base64.getDecoder();
         try {
             // Base64解码
-            byte[] bytes = decoder.decodeBuffer(data.substring(2,data.length()-1));
+            byte[] bytes = decoder.decode(data.substring(2,data.length()-1));
             for (int i = 0; i < bytes.length; ++i) {
                 if (bytes[i] < 0) {// 调整异常数据
                     bytes[i] += 256;

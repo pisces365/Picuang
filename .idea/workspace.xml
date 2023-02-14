@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b87d8c55-1834-406c-9684-18f017a5d2d4" name="Default Changelist" comment="4">
-      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketServer3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pers/adlered/picuang/controller/websocket/WebSocketServer3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer3.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,15 +155,15 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/pisces/Gitware/Picuang",
+    "last_opened_file_path": "/home/pisces/Gitware/smart-screen-for-uav",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
+    "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
     "spring.configuration.checksum": "3dc011c4181fe3f2771f275841d5f5e9",
     "vue.rearranger.settings.migration": "true"
   }
@@ -461,6 +462,8 @@
       <workItem from="1676363400268" duration="1292000" />
       <workItem from="1676374920772" duration="1074000" />
       <workItem from="1676376347846" duration="361000" />
+      <workItem from="1676377660803" duration="2158000" />
+      <workItem from="1676381739828" duration="959000" />
     </task>
     <task id="LOCAL-00028" summary="上传后点击图片可以在新标签页打开原图">
       <created>1573105630620</created>
