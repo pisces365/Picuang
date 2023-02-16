@@ -99,9 +99,10 @@ public class WebSocketCalcResult {
     public void onMessage(String data, Session session, @PathParam(value = "sid") String userName, @PathParam(value = "type") String type) throws IOException{
         System.out.println(data);
         try {
-            for(ConcurrentHashMap.Entry<String, Session> ce: SessionPools.entrySet()) {
-                ce.getValue().getBasicRemote().sendText(data);
-            }
+            SessionPools.get("vue").getBasicRemote().sendText(data);
+//            for(ConcurrentHashMap.Entry<String, Session> ce: SessionPools.entrySet()) {
+//                ce.getValue().getBasicRemote().sendText(data);
+//            }
 
         } catch (Exception e) {
             System.out.println(e);

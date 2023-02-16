@@ -11,7 +11,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="picuang" target="11" />
+      <module name="picuang" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -5,13 +5,42 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b87d8c55-1834-406c-9684-18f017a5d2d4" name="Default Changelist" comment="4">
+      <change afterPath="$PROJECT_DIR$/.attach_pid26549" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/picuang_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/picuang_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_11_1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_6_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_8_RELEASE.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_6_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/picuang.iml" beforeDir="false" afterPath="$PROJECT_DIR$/picuang.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/UAVHeightWebSocketServer2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketCalcResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketFireAreaImage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket/WebSocketServer3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pers/adlered/picuang/picuang/PicuangApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pers/adlered/picuang/picuang/PicuangApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,29 +174,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/pisces/Gitware/smart-screen-for-uav",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "spring.configuration.checksum": "3dc011c4181fe3f2771f275841d5f5e9",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/pisces/Gitware/Picuang&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;ssh.settings&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;3dc011c4181fe3f2771f275841d5f5e9&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/java/pers/adlered/picuang/controller/websocket" />
@@ -359,6 +388,8 @@
       </method>
     </configuration>
     <configuration name="PicuangApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="pers.adlered.picuang.PicuangApplication" />
       <module name="picuang" />
       <extension name="coverage">
@@ -407,6 +438,14 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.DoubleKeys" />
+      <item itemvalue="Application.PicuangApplication" />
+      <item itemvalue="Application.Prop" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="HTTP Request.rest-api_4#1" />
+      <item itemvalue="Spring Boot.PicuangApplication" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.PicuangApplication" />
@@ -463,7 +502,12 @@
       <workItem from="1676374920772" duration="1074000" />
       <workItem from="1676376347846" duration="361000" />
       <workItem from="1676377660803" duration="2158000" />
-      <workItem from="1676381739828" duration="959000" />
+      <workItem from="1676381739828" duration="1674000" />
+      <workItem from="1676439537163" duration="2695000" />
+      <workItem from="1676448697783" duration="854000" />
+      <workItem from="1676453058117" duration="636000" />
+      <workItem from="1676463560210" duration="6564000" />
+      <workItem from="1676513622907" duration="5495000" />
     </task>
     <task id="LOCAL-00028" summary="上传后点击图片可以在新标签页打开原图">
       <created>1573105630620</created>

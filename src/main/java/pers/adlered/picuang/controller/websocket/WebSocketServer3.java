@@ -108,35 +108,36 @@ public class WebSocketServer3 {
     @OnMessage
     public void onMessage(String data, Session session, @PathParam(value = "sid") String userName, @PathParam(value = "type") String type) throws IOException{
 //        Logger.log("Received video data size:" + data);
-        Decoder decoder = Base64.getDecoder();
+//        Decoder decoder = Base64.getDecoder();
         try {
-            // Base64解码
-            byte[] bytes = decoder.decode(data.substring(2,data.length()-1));
-            for (int i = 0; i < bytes.length; ++i) {
-                if (bytes[i] < 0) {// 调整异常数据
-                    bytes[i] += 256;
-                }
-            }
-            String[] time = ToolBox.getDirByTime();
-            String path = ToolBox.getPicStoreDir() + time[1] + type + "/" + time[2] ;
-            String suffixName = Integer.toString(new Random(1).nextInt(10));
-            String fileName = UUID.randomUUID() + suffixName;
-            // 生成jpeg图片
-            File dest = new File(path + fileName);
-            if (!dest.getParentFile().exists()) {
-                dest.getParentFile().mkdirs();
-            }
-            OutputStream out = new FileOutputStream(path + fileName + ".jpg");
-            out.write(bytes);
-            out.flush();
-            out.close();
-            String filename = dest.getName();
-            String archive_url = "uploadImages/" + time[1] + type + "/" + filename + ".jpg";
-            PictureNameList.getBelowBinary().add(archive_url);
-            for(ConcurrentHashMap.Entry<String, Session> ce: SessionPools.entrySet()) {
-                ce.getValue().getBasicRemote().sendText(archive_url);
-            }
+//            // Base64解码
+//            byte[] bytes = decoder.decode(data.substring(2,data.length()-1));
+//            for (int i = 0; i < bytes.length; ++i) {
+//                if (bytes[i] < 0) {// 调整异常数据
+//                    bytes[i] += 256;
+//                }
+//            }
+//            String[] time = ToolBox.getDirByTime();
+//            String path = ToolBox.getPicStoreDir() + time[1] + type + "/" + time[2] ;
+//            String suffixName = Integer.toString(new Random(1).nextInt(10));
+//            String fileName = UUID.randomUUID() + suffixName;
+//            // 生成jpeg图片
+//            File dest = new File(path + fileName);
+//            if (!dest.getParentFile().exists()) {
+//                dest.getParentFile().mkdirs();
+//            }
+//            OutputStream out = new FileOutputStream(path + fileName + ".jpg");
+//            out.write(bytes);
+//            out.flush();
+//            out.close();
+//            String filename = dest.getName();
+//            String archive_url = "uploadImages/" + time[1] + type + "/" + filename + ".jpg";
+//            PictureNameList.getBelowBinary().add(archive_url);
+//            for(ConcurrentHashMap.Entry<String, Session> ce: SessionPools.entrySet()) {
+//                ce.getValue().getBasicRemote().sendText(archive_url);
+//            }
             //====
+            SessionPools.get("vue").getBasicRemote().sendText(data);
 
         } catch (Exception e) {
             System.out.println(e);
